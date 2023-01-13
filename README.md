@@ -1,2 +1,3 @@
 # trybe-exercicios
-Exercicios da trybe e testes
+Exercicios Trybe
+Para testes no melhor escola de dev.
