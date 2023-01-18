@@ -1,0 +1,9 @@
+h1, p {
+  text-align: center;
+}
+ol:hover {
+background-color: green;
+}
+li:active {
+font-family: sans-serif, helvetica;
+}
