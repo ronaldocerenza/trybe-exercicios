@@ -1,0 +1,45 @@
+.order-list li.impar{
+  background-color: yellow;
+  text-transform: uppercase;
+}
+.order-list li.par{
+  background-color: green;
+}
+h1, h2{
+  color: red;
+}
+h1 em, h2 em{
+  size: 40px;
+  border: 1px solid black;
+  }
+li{
+  font-size: 20px;
+}
+li em{
+  font-weight: 700;
+}
+/* not(:nth-child(n + 4)) => exceto do 4 em diante */
+#linguagem li:not(:nth-child(n + 4)) {
+color: blue;
+}
+.rosa{
+  background-color: pink;
+}
+#mouse li a:hover {
+  font-weight: 700;
+}
+#mouse li a[href*="stackoverflow"] {
+  color: orange;
+}
+#mouse li a[href*="w3schools"] {
+  color: green;
+}
+#mouse li a[href*="mozilla"] {
+  color: black;
+}
+#mouse li a[href*="devdocs"] {
+  color: yellow;
+}
+#mouse li a[href*="trybe"] {
+  color: green;
+}
