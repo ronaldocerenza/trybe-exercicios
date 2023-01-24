@@ -77,9 +77,8 @@ else (a + b + c < 0){
   // Exemplo: bishop (bispo) -> diagonals (diagonais)
 
   let pecaXadrez = 'CAVALO'  
-  console.log(pecaXadrez.toLowerCase());
-  
-switch (pecaXadrez) {
+    
+switch (pecaXadrez.toLowerCase()) {
   case "peão":
   console.log('são apenas permitidos movimentos frontais, de modo que o primeiro movimento de cada peão pode abranger duas casas, os outros movimentos se restringem a uma casa à frente. Embora se movimente para frente, o ataque do peão sempre ocorre na diagonal.');
     break;
@@ -172,17 +171,16 @@ if(a%2 != 0 || b%2 != 0 || c%2 != 0){
 // valorCustoTotal = valorCusto + impostoSobreOCusto;
 // lucro = valorVenda - valorCustoTotal (lucro de um produto);
 
+const costOfProduct = 1;
+const saleValue = 3;
 
-const valorCusto = 700
-const valorVenda = 1100
-const impostoSobreOCusto = 0.20
-const valorCustoTotal = valorCusto * impostoSobreOCusto
-const lucro = valorVenda - valorCustoTotal
-
-
-if (lucro * 1000) {
-  
-}
+if (costOfProduct >= 0 && saleValue >= 0) {
+  const totalCostOfProduct = costOfProduct * 1.2;
+  const totalProfit = (saleValue - totalCostOfProduct) * 1000;
+  console.log(totalProfit);
+} else {
+  console.log("Error, os valores não podem ser negativos");
+};
 
 // Utilize if/else para escrever um código que, dado um salário bruto, calcule o líquido a ser recebido.
 // Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR.
@@ -208,3 +206,35 @@ if (lucro * 1000) {
 // Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
 // O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 // Resultado: R$ 2.612,55.
+
+
+let aliquotINSS;
+let aliquotIR;
+
+const grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
+}
+
+const baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
