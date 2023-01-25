@@ -59,3 +59,19 @@ if (numbers[index] < menorNumero) {
 }
 console.log(menorNumero);
 
+// Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
+
+let list25 = [];
+
+for (let index = 1; index <= 25; index += 1){
+  list25.push(index)
+}
+console.log(list25);
+
+// Utilizando o array que acabou de criar, imprima o resultado da divisão de cada um dos elementos por 2.
+
+for (let index = 1; index < list25.length; index += 1){
+  console.log(list25[index] / 2);
+}
+
+
