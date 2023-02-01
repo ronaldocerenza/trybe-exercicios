@@ -60,7 +60,7 @@
 // Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
   const tagH1 = document.createElement('h1');
   tagH1.innerText = 'TrybeTrip - Agência de Viagens';
-  document.querySelector('body').appendChild(tagH1)
+  document.querySelector('body').appendChild(tagH1);
 
 // Adicione a tag main com a classe main-content como filho da tag body;
   const tagMain = document.createElement('main');
@@ -80,7 +80,7 @@
 // Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
   const tagSection1 = document.createElement('section');
   tagSection1.className = 'left-content';
-  document.querySelector('.main-content').appendChild(tagSection1)
+  document.querySelector('.main-content').appendChild(tagSection1);
 
 // Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
   const tagSection2 = document.createElement('section');
@@ -94,17 +94,21 @@
   document.querySelector('.left-content').appendChild(tagImg);
 
 // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
-  // const tagNaoOrdenada = document.createElement('ul');
   
-  // for (let index = 1; index <= 10; index += 1) {
-  //   [index] = document.createElement('li');
-  // }
+const tagNaoOrdenada = document.createElement('ul');
+document.querySelector('.right-content').appendChild(tagNaoOrdenada);
 
-  // const tagLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
-    
-  // document.querySelector('.right-content').appendChild()
-  //   console.log(lista);
+const tagLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
+const createLi = (texto) => {
+  const novaLi = document.createElement('li');novaLi.innerText = texto;
+  return novaLi;
+};
+
+for (let lista of tagLista) {
+  const novaLi = createLi(lista);
+  tagSection2.appendChild(novaLi);
+};
     </script>
   </body>
 </html>
