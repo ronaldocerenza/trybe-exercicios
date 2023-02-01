@@ -1,27 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <main id="paiDoPai">
-    <section id="pai">
-      <section id="primeiroFilho"></section>
-      <section id="elementoOndeVoceEsta">
-        <section id="primeiroFilhoDoFilho"></section>
-        <section id="segundoEUltimoFilhoDoFilho"></section>
-      </section>
-      Atenção!
-      <section id="terceiroFilho"></section>
-      <section id="quartoEUltimoFilho"></section>
-    </section>
-  </main>
-  <script>
-    document.querySelector("#elementoOndeVoceEsta").parentNode //ver nome do pai
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
 
-  </script>
-</body>
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+// Adicione a tag h1 com o texto TrybeTrip - Agência de Viagens como filho da tag body;
+  const tagH1 = document.createElement('h1');
+  tagH1.innerText = 'TrybeTrip - Agência de Viagens';
+  document.querySelector('body').appendChild(tagH1)
+
+// Adicione a tag main com a classe main-content como filho da tag body;
+  const tagMain = document.createElement('main');
+  tagMain.className = 'main-content';
+  document.querySelector('body').appendChild(tagMain);
+
+// Adicione a tag section com a classe center-content como filho da tag main criada no passo 2;
+  const tagSection = document.createElement('section');
+  tagSection.className = 'center-content';
+  document.querySelector('main').appendChild(tagSection);
+
+// Adicione a tag p como filho do section criado no passo 3 e coloque algum texto;
+  const tagP = document.createElement('p');
+  tagP.innerText = 'Algum Texto';
+  document.querySelector('section').appendChild(tagP);
+
+// Adicione a tag section com a classe left-content como filho da tag main criada no passo 2;
+  const tagSection1 = document.createElement('section');
+  tagSection1.className = 'left-content';
+  document.querySelector('.main-content').appendChild(tagSection1)
+
+// Adicione a tag section com a classe right-content como filho da tag main criada no passo 2;
+  const tagSection2 = document.createElement('section');
+  tagSection2.className = 'right-content';
+  document.querySelector('.main-content').appendChild(tagSection2);
+
+// Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image. Esse elemento deve ser filho do section criado no passo 5;
+  const tagImg = document.createElement('img');
+  tagImg.src = 'https://picsum.photos/200';
+  tagImg.className = 'small-image';
+  document.querySelector('.left-content').appendChild(tagImg);
+
+// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso, ou seja, um, dois, três, … como valores da lista. Essa lista deve ser filha do section criado no passo 6;
+  // const tagNaoOrdenada = document.createElement('ul');
+  
+  // for (let index = 1; index <= 10; index += 1) {
+  //   [index] = document.createElement('li');
+  // }
+
+  // const tagLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+    
+  // document.querySelector('.right-content').appendChild()
+  //   console.log(lista);
+
+    </script>
+  </body>
 </html>
