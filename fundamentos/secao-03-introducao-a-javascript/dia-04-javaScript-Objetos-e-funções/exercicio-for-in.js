@@ -1,4 +1,3 @@
-/*
 let info = {
   personagem: 'Margarida',
   origem: 'Pato Donald',
@@ -52,7 +51,6 @@ console.log('Ambos Recorrentes');
    }
 }
 
-*/
 let leitor = {
   nome: 'Julia',
   sobrenome: 'Pessoa',
