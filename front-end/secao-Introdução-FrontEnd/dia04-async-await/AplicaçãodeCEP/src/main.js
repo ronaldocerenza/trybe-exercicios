@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 const buttonEl = document.querySelector('button');
 const inputEl = document.querySelector('input');
 const preEl = document.querySelector('pre');
@@ -15,7 +17,11 @@ async function handleClick() {
     console.log(data);
     return data;
   } catch (error) {
-    return error.message;
+    return Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'CEP inválido'
+    })
   }
 }
 
