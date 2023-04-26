@@ -1,0 +1,17 @@
+{
+  "name": "geradordesenhas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ronaldoCerenza",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "nanoid": "^4.0.1",
+    "vite": "^4.2.0"
+  },
+  "type": "module"
+}
