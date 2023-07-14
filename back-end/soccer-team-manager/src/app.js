@@ -64,9 +64,16 @@ app.delete('/teams/:id', (req, res) => {
   const arrayPosition = teams.findIndex((team) => team.id === Number(id));
   teams.splice(arrayPosition, 1);
 
-  res.status(200).end();
+  res.status(204).end();
 });
 // delete é o método http que vai ser utilizado, e a rota é a /teams/:id
 
 module.exports = app;
 // exportando o app para ser utilizado em outros arquivos
+
+
+// resumo post: cria um novo recurso com os dados enviados no corpo da requisição
+// resumo put: atualiza um recurso com os dados enviados no corpo da requisição
+// resumo delete: deleta um recurso com o id enviado na url da requisição
+// resumo get: retorna um recurso com o id enviado na url da requisição
+// resumo patch: atualiza um recurso com os dados enviados no corpo da requisição
