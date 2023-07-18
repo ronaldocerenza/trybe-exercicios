@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 // app é a variável que vai receber o express
 
-const teams = require('./data');
+const teams = require('../data/data');
 
 app.use(express.json());
 // o express vai utilizar o json para fazer as requisições

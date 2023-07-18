@@ -7,7 +7,7 @@ chai.use(chaiHttp);
 // chai utiliza o chai-http para fazer os testes
 const app = require('../app');
 
-const teams = require('../data');
+const teams = require('../../data/data');
 
 describe('Testes da aplicação', () => {
   it('Testa se a aplicação retorna um array', async () => {
