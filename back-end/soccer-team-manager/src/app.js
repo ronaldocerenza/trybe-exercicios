@@ -4,6 +4,8 @@ const express = require('express');
 const app = express();
 // app é a variável que vai receber o express
 
+const teams = require('./data');
+
 app.use(express.json());
 // o express vai utilizar o json para fazer as requisições
 
@@ -13,22 +15,10 @@ app.use(express.json());
 // a função de callback recebe a requisição e a resposta, e retorna um status 200 e um json
 // o json é um objeto, que tem uma chave message, e um valor Olá Mundo!
 // 200 é o status de sucesso, que significa que a requisição foi bem sucedida
+// 201 é o status de sucesso, que significa que a requisição foi bem sucedida e um novo recurso foi criado
+// 204 é o status de sucesso, que significa que a requisição foi bem sucedida, mas não tem conteúdo para retornar
 // 500 é o status de erro, que significa que a requisição não foi bem sucedida
 // 404 é o status de erro, que significa que a rota não foi encontrada
-
-const teams = [
-  {
-    id: 1,
-    name: 'São Paulo Futebol Clube',
-    initials: 'SPF',
-  },
-  {
-    id: 2,
-    name: 'Clube Atlético Mineiro',
-    initials: 'CAM',
-  },
-];
-// array de objetos, que tem dois objetos dentro
 
 app.get('/teams', (req, res) => res.status(200).json({ teams }));
 // rota teams, que retorna um status 200 e um json
