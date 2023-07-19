@@ -1,0 +1,64 @@
+version: '3'
+# Todo arquivo docker-compose.yaml deve iniciar com a chave version. Dessa maneira, definimos qual versão deverá ser utilizada pelo Compose para interpretar o arquivo. A versão 3 é a mais recente e a que utilizaremos em nossos exemplos.
+services:
+  frontend:
+    build: frontend/
+    # Especificamos o contexto, ou seja, a pasta onde está o Dockerfile.
+    restart: always
+    # Definimos a política de restart do container.
+    ports:
+      - 3000:3000
+    # Em nosso exemplo, a imagem Docker do front-end expõe a porta 3000, enquanto a imagem Docker para o nosso back-end expõe a porta 3001. O formato da especificação é exatamente como utilizamos na flag -p. Logo, nosso arquivo ficará assim:
+    depends_on:
+      - backend
+    # Definimos que o front-end depende do back-end. Dessa maneira, o Compose garante que o back-end será iniciado antes do front-end.
+    volumes:
+      - ./frontend/src:/frontend/src
+    # Definimos um volume para o front-end. Dessa maneira, podemos alterar o código do front-end sem precisar recriar a imagem Docker.
+    # networks:
+    #  - rede-virtual-1
+    # Definimos a rede virtual que o front-end utilizará. Note que o front-end utilizará apenas uma rede virtual.
+  backend:
+    build: backend/
+    # Mesmo caso aqui.
+    restart: always
+    ports:
+      - 3001:3001
+    # o primeiro parâmetro é sempre a porta do computador local e o segundo parâmetro é a porta exposta no container.
+    environment:
+      - DB_HOST=database
+    # Definimos a variável de ambiente DB_HOST com o valor database. Essa variável será utilizada pelo back-end para se conectar ao banco de dados.
+    depends_on:
+      - database
+    # Definimos que o back-end depende do banco de dados. Dessa maneira, o Compose garante que o banco de dados será iniciado antes do back-end.
+    # networks:
+    #  - rede-virtual-1
+    #  - rede-virtual-2
+    # Definimos as redes virtuais que o back-end utilizará. Note que o back-end utilizará duas redes virtuais.
+  database:
+    image: betrybe/docker-compose-example-database:v1
+    # Especificamos a Imagem Docker diretamente.
+    restart: always
+    # Definimos a política de restart do container.
+  #networks:
+  #    - rede-virtual-2
+    # Definimos a rede virtual que o banco de dados utilizará. E note que o banco de dados utilizará apenas uma rede virtual.
+
+# volumes:
+#  dados-do-banco:
+# Definimos um volume para o banco de dados. Dessa maneira, podemos alterar o banco de dados sem precisar recriar a imagem Docker.
+#networks:
+#  rede-virtual-1:
+#  rede-virtual-2:
+# Definimos as redes virtuais que serão utilizadas. Note q ue definimos duas redes virtuais, uma para o front-end e outra para o back-end e o banco de dados.
+
+# Configuramos da seguinte maneira:
+
+# Três serviços, um deles usando uma imagem Docker pronta e dois com arquivo Dockerfile;
+# Mapeamos as portas de conexão;
+# Configuramos a política de reinicialização;
+# Criamos uma variável de ambiente;
+# Definimos a ordem de subida dos serviços.
+# Agora é o momento de finalmente fazer o Compose trabalhar e seguir a nossa receita de serviços!
+
+
