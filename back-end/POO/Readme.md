@@ -1,0 +1,1 @@
+- Lembre-se: estamos usando o ts-node que faz a transpilação por debaixo dos panos e retorna no termonal o resultado do terminal
