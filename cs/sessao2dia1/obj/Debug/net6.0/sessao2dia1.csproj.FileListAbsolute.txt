@@ -1,0 +1,5 @@
+/home/cerenza/Documentos/trybe-exercicios/cs/sessao2dia1/obj/Debug/net6.0/sessao2dia1.csproj.AssemblyReference.cache
+/home/cerenza/Documentos/trybe-exercicios/cs/sessao2dia1/obj/Debug/net6.0/sessao2dia1.GeneratedMSBuildEditorConfig.editorconfig
+/home/cerenza/Documentos/trybe-exercicios/cs/sessao2dia1/obj/Debug/net6.0/sessao2dia1.AssemblyInfoInputs.cache
+/home/cerenza/Documentos/trybe-exercicios/cs/sessao2dia1/obj/Debug/net6.0/sessao2dia1.AssemblyInfo.cs
+/home/cerenza/Documentos/trybe-exercicios/cs/sessao2dia1/obj/Debug/net6.0/sessao2dia1.csproj.CoreCompileInputs.cache

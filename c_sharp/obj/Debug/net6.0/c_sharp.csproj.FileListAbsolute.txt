@@ -1,0 +1,15 @@
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.csproj.AssemblyReference.cache
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.AssemblyInfoInputs.cache
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.AssemblyInfo.cs
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.csproj.CoreCompileInputs.cache
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/c_sharp
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/c_sharp.deps.json
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/c_sharp.runtimeconfig.json
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/c_sharp.dll
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/ref/c_sharp.dll
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/bin/Debug/net6.0/c_sharp.pdb
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.dll
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/ref/c_sharp.dll
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.pdb
+/home/cerenza/Documentos/trybe-exercicios/c_sharp/obj/Debug/net6.0/c_sharp.genruntimeconfig.cache
